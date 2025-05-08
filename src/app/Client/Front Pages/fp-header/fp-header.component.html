@@ -1,0 +1,280 @@
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- <header [ngClass]="{
+    'bg-white shadow-sm sticky top-0 z-50 transition-all duration-300': true,
+    'py-2 shadow-md bg-white/80 backdrop-blur-md': isScrolled,
+    'py-4': !isScrolled
+  }"> -->
+  
+    <!-- Main Header -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+        <!-- Logo -->
+        <div class="flex justify-start lg:w-0 lg:flex-1">
+          <a href="#" class="flex items-center">
+            <span class="sr-only">Snap-Savvy</span>
+            <svg class="h-8 w-auto text-purple-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="ml-2 text-xl font-bold text-purple-900">Snap-Savvy</span>
+          </a>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <div class="-mr-2 -my-2 md:hidden">
+          <button type="button" (click)="toggleMobileMenu()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <span class="sr-only">Open menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-10">
+          <!-- Categories Dropdown -->
+          <!-- <div class="relative group">
+            <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span>Shop</span>
+              <svg class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          
+            <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-4xl sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200">
+              <div class="rounded-lg shadow-lg ring-1 ring-white ring-opacity-5 overflow-hidden">
+                <div class="relative bg-white px-5 py-6 sm:p-8">
+                  <div class="grid grid-cols-2 gap-8">
+                    <div *ngFor="let category of categories" class="-m-3 p-3">
+                      <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">{{category.name}}</p>
+                        <div class="mt-2 grid grid-cols-1 gap-1">
+                          <div *ngFor="let subcategory of category.subcategories">
+                            <a [href]="subcategory.href" class="text-sm text-gray-500 hover:text-indigo-600 hover:bg-gray-50 block px-2 py-1 rounded">{{subcategory.name}}</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="relative group">
+            <!-- Shop Button -->
+            <button type="button" class="cursor-pointer text-gray-700 bg-white rounded-md inline-flex items-center text-base font-medium hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span>Shop</span>
+              <svg class="ml-2 h-5 w-5 text-gray-400 group-hover:text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Panel - Fixed positioning -->
+            <div class="fixed left-0 w-screen z-50 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 ease-in-out">
+              <div class="bg-white/30 backdrop-blur-md shadow-lg rounded-lg py-8 px-6">
+                <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8">
+                  <!-- MacBook Air Section -->
+                  <div>
+                    <a routerLink="/macbook-air" class="text-lg font-semibold text-gray-900 mb-2">MacBook Air</a>
+                    <ul class="space-y-1">
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">MacBook Air M2</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">MacBook Air M1</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">13" MacBook Air</a></li>
+                    </ul>
+                  </div>
+          
+                  <!-- MacBook Pro Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">MacBook Pro</h3>
+                    <ul class="space-y-1">
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">14" MacBook Pro</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">16" MacBook Pro</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">MacBook Pro M3</a></li>
+                    </ul>
+                  </div>
+          
+                  <!-- Refurbished Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Refurbished</h3>
+                    <ul class="space-y-1">
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Refurbished Air</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Refurbished Pro</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Refurbished Max</a></li>
+                    </ul>
+                  </div>
+          
+                  <!-- Accessories Section -->
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Accessories</h3>
+                    <ul class="space-y-1">
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Chargers</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Cases & Sleeves</a></li>
+                      <li><a href="#" class="text-sm text-gray-600 hover:text-indigo-600">Stands & Hubs</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+  
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-purple-600">New Arrivals</a>
+          <a href="#" class="text-base font-medium text-gray-500 hover:text-purple-600">Deals</a>
+          <a href="/about" routerLink="/about" class="text-base font-medium text-gray-500 hover:text-purple-600">About</a>
+          <a href="/contact" routerLink="/contact" class="text-base font-medium text-gray-500 hover:text-purple-600">Contact</a>
+        </nav>
+  
+        <!-- Right Side Icons -->
+        <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-4">
+          <!-- Search -->
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search">
+          </div>
+  
+          <!-- Account Dropdown -->
+          <div class="relative">
+            <button type="button" (click)="toggleAccountDropdown()" class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="sr-only">Account</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </button>
+  
+            <!-- Account Dropdown Panel -->
+            <div *ngIf="isAccountDropdownOpen" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-white ring-opacity-5 focus:outline-none z-20">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Orders</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Wishlist</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+              <div class="border-t border-gray-200"></div>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+            </div>
+          </div>
+  
+          <!-- Cart Dropdown -->
+          <div class="relative">
+            <button type="button" (click)="toggleCartDropdown()" class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="sr-only">Cart</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span *ngIf="cartItemCount > 0" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">{{cartItemCount}}</span>
+            </button>
+  
+            <!-- Cart Dropdown Panel -->
+            <div *ngIf="isCartDropdownOpen" class="origin-top-right absolute right-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-white ring-opacity-5 focus:outline-none z-20">
+              <div class="p-4">
+                <h3 class="text-lg font-medium text-gray-900">Your Cart</h3>
+                <div *ngIf="cartItems.length === 0" class="mt-4 text-center text-gray-500">
+                  Your cart is empty
+                </div>
+                <div *ngIf="cartItems.length > 0">
+                  <div class="mt-4 space-y-4">
+                    <div *ngFor="let item of cartItems" class="flex items-center">
+                      <img [src]="item.image" alt="Product image" class="h-16 w-16 rounded object-cover">
+                      <div class="ml-4 flex-1">
+                        <h4 class="text-sm font-medium text-gray-900">{{item.name}}</h4>
+                        <p class="text-sm text-gray-500">Qty: {{item.quantity}}</p>
+                      </div>
+                      <p class="text-sm font-medium text-gray-900">${{item.price | number:'1.2-2'}}</p>
+                    </div>
+                  </div>
+                  <div class="mt-6 border-t border-gray-200 pt-4">
+                    <div class="flex justify-between text-base font-medium text-gray-900">
+                      <p>Subtotal</p>
+                      <p>${{cartTotal | number:'1.2-2'}}</p>
+                    </div>
+                    <div class="mt-4">
+                      <a href="#" class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
+                    </div>
+                    <div class="mt-2 flex justify-center text-sm text-center text-gray-500">
+                      <p>
+                        or <a href="#" class="text-indigo-600 font-medium hover:text-indigo-500">Continue Shopping</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Top Announcement Bar -->
+    <div class="bg-gray-100/70 font-bold py-4 px-4 text-center text-sm">
+      <div class="inline-block text-center text-black font-bold">
+        Buy MacBook Air starting at $899 with education savings. <a class="cursor-pointer text-purple-600">Shop Now!</a>
+      </div>
+  </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isMobileMenuOpen" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
+      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+        <div class="pt-5 pb-6 px-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <a href="#" class="flex items-center">
+                <svg class="h-8 w-auto text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="ml-2 text-xl font-bold text-gray-900">ShopEase</span>
+              </a>
+            </div>
+            <div class="-mr-2">
+              <button type="button" (click)="toggleMobileMenu()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="mt-6">
+            <nav class="grid gap-y-8">
+              <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                <span class="ml-3 text-base font-medium text-gray-900">New Arrivals</span>
+              </a>
+              <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                <span class="ml-3 text-base font-medium text-gray-900">Deals</span>
+              </a>
+              <a href="/about" routerLink="/about" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                <span class="ml-3 text-base font-medium text-gray-900">About</span>
+              </a>
+              <a href="/contact" routerLink="/contact" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                <span class="ml-3 text-base font-medium text-gray-900">Contact</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="py-6 px-5 space-y-6">
+          <div>
+            <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Sign in</a>
+            <p class="mt-6 text-center text-base font-medium text-gray-500">
+              New customer?
+              <a href="#" class="text-indigo-600 hover:text-indigo-500">Create an account</a>
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Account</a>
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Orders</a>
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Wishlist</a>
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Settings</a>
+          </div>
+          <div class="relative">
+            <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

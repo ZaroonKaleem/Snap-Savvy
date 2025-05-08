@@ -1,0 +1,154 @@
+<div class="contain">
+  <h2 class="text-gray-900 font-title text-3xl font-bold text-center">Top Selling <span class="text-purple-600">Macbooks</span></h2>
+</div>
+<div class="flex mt-6 justify-center">
+  <div class="w-16 h-1 rounded-full bg-purple-600 inline-flex"></div>
+</div>
+
+
+<div class="flex justify-center gap-4 mt-10">
+    <button
+      class="px-6 py-2 text-sm font-semibold border-2 border-purple-800 rounded-full transition"
+      [ngClass]="{ 'bg-purple-600 text-white': selectedSize === '14' }"
+      (click)="selectSize('14')">
+      14 inch
+    </button>
+    <button
+      class="px-6 py-2 text-sm font-semibold border-2 border-purple-800 rounded-full transition"
+      [ngClass]="{ 'bg-purple-600 text-white': selectedSize === '16' }"
+      (click)="selectSize('16')">
+      16 inch
+    </button>
+  </div>
+  
+  <!-- Chip Filter Capsules -->
+  <div class="flex justify-center gap-4 mt-6">
+    <button
+      class="px-5 py-1.5 text-sm font-medium rounded-full transition"
+      [ngClass]="{ 'bg-purple-600 text-white': selectedChip === 'all', 'border-2 border-purple-800 text-gray-900': selectedChip !== 'all' }"
+      (click)="selectChip('all')">
+      All Chips
+    </button>
+    <button
+      class="px-5 py-1.5 text-sm font-medium rounded-full transition"
+      [ngClass]="{ 'bg-purple-600 text-white': selectedChip === 'm4pro', 'border-2 border-purple-800 text-gray-900': selectedChip !== 'm4pro' }"
+      (click)="selectChip('m4pro')">
+      M4 / M4 Pro
+    </button>
+    <button
+      class="px-5 py-1.5 text-sm font-medium rounded-full transition"
+      [ngClass]="{ 'bg-purple-600 text-white': selectedChip === 'm4max', 'border-2 border-purple-800 text-gray-900': selectedChip !== 'm4max' }"
+      (click)="selectChip('m4max')">
+      M4 Max
+    </button>
+  </div>
+<div class="flex flex-wrap justify-between gap-6 px-4 py-10 bg-transparent">
+
+    <!-- Screen Size Toggle -->
+  
+
+    <!-- Card Start -->
+    <div class="w-full md:w-[32%] bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between h-[650px]">
+      <img src="assets/m4-laptop.png"
+           alt="MacBook Air" class="w-full h-48 object-contain" />
+      <div class="p-5 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-1">MacBook Air <span class="text-purple-700">M4</span></h2>
+          <p class="text-sm font-bold text-purple-600 mb-2">Powerful. Lightweight. Silent.</p>
+          <ul class="text-sm text-gray-700 list-none list-inside space-y-1 mb-4">
+            <li>Apple M2 Chip with 8-core CPU</li>
+            <li>256GB SSD, 8GB RAM</li>
+            <li>13.6-inch Liquid Retina Display</li>
+            <li>Up to 18 hours battery life</li>
+            <li>Three Thunderbolt 5 ports,</li> 
+            <li>HDMI port, SDXC card slot,</li>
+            <li>headphone jack, MagSafe 3 port</li>
+            <li>Magic Keyboard with Touch ID</li>
+            <li>Force Touch trackpad</li>
+            <li>140W USB-C Power Adapter</li>
+          </ul>
+          <div class="flex gap-2 mb-4">
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-800"></button>
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-300"></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="text-lg font-semibold text-gray-900">$1,199</span>
+          <button class="px-4 py-2 border-2 border-gray-900 rounded-full text-gray-900 hover:bg-gray-900 hover:text-white transition">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Card End -->
+  
+    <!-- Repeat the card structure for MacBook Pro M3 -->
+    <div class="w-full md:w-[32%] bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between h-[650px]">
+      <img src="assets/m4-laptop.png"
+           alt="MacBook Pro" class="w-full h-48 object-contain" />
+      <div class="p-5 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-1">MacBook Pro <span class="text-purple-700">M4 Pro</span></h2>
+          <p class="text-sm font-bold text-purple-600 mb-2">Performance Redefined.</p>
+          <ul class="text-sm text-gray-700 list-none list-inside space-y-1 mb-4">
+            <li>Apple M3 Chip with 10-core CPU</li>
+            <li>512GB SSD, 16GB RAM</li>
+            <li>14-inch Liquid Retina XDR Display</li>
+            <li>Up to 20 hours battery life</li>
+            <li>Three Thunderbolt 5 ports,</li> 
+            <li>HDMI port, SDXC card slot,</li>
+            <li>headphone jack, MagSafe 3 port</li>
+            <li>Magic Keyboard with Touch ID</li>
+            <li>Force Touch trackpad</li>
+            <li>140W USB-C Power Adapter</li>
+          </ul>
+          <div class="flex gap-2 mb-4">
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-800"></button>
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-300"></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="text-lg font-semibold text-gray-900">$1,799</span>
+          <button class="px-4 py-2 border-2 border-gray-900 rounded-full text-gray-900 hover:bg-gray-900 hover:text-white transition">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- MacBook Pro M3 Max -->
+    <div class="w-full md:w-[32%] bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between h-[650px]">
+      <img src="assets/m4-laptop.png"
+           alt="MacBook Pro Max" class="w-full h-48 object-contain" />
+      <div class="p-5 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-1">MacBook Pro <span class="text-purple-700">M4 Max</span></h2>
+          <p class="text-sm font-bold text-purple-600 mb-2">Extreme Power for Professionals.</p>
+          <ul class="text-sm text-gray-700 list-none list-inside space-y-1 mb-4">
+            <li>Apple M3 Max Chip with 16-core CPU</li>
+            <li>1TB SSD, 32GB RAM</li>
+            <li>16-inch Liquid Retina XDR Display</li>
+            <li>Up to 22 hours battery life</li>
+            <li>Three Thunderbolt 5 ports,</li> 
+            <li>HDMI port, SDXC card slot,</li>
+            <li>headphone jack, MagSafe 3 port</li>
+            <li>Magic Keyboard with Touch ID</li>
+            <li>Force Touch trackpad</li>
+            <li>140W USB-C Power Adapter</li>
+          </ul>
+          <div class="flex gap-2 mb-4">
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-800"></button>
+            <button class="w-6 h-6 rounded-full border-2 border-black bg-gray-300"></button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="text-lg font-semibold text-gray-900">$3,299</span>
+          <button class="px-4 py-2 border-2 border-gray-900 rounded-full text-gray-900 hover:bg-gray-900 hover:text-white transition">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
