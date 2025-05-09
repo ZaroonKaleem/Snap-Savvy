@@ -16,7 +16,59 @@
 
 <div class="max-w-[900px] text-center px-8 mt-8 mx-auto">
     <p class="text-xl text-gray-500 mb-8 font-bold text-center">
-        Apple Intelligence is the personal intelligence system that helps you write, express yourself, and get things done effortlessly. With groundbreaking privacy protections, it gives you peace of mind that no one else can access your data — not even Apple.
+        Apple Intelligence is the personal intelligence system that helps you write, express yourself, and get things
+        done effortlessly. With groundbreaking privacy protections, it gives you peace of mind that no one else can
+        access your data — not even Apple.
     </p>
-    <a class="mt-8 text-xl text-blue-500" href="/">Learn More about Apple Intelligence</a>
+    <a class="mt-8 text-xl text-blue-400 hover:text-blue-500 duration-300" href="/">Learn More about Apple
+        Intelligence</a>
+</div>
+
+
+<!-- aerial-agility.component.html -->
+<div class="container mt-8 mx-auto px-4 py-8 max-w-4xl">
+
+    <!-- Navigation Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4">
+        <button (click)="changeTab('prototype')" [class]="activeTab === 'prototype' ? 
+      'rainbow-text-selected' : 
+      'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Writing Tools
+        </button>
+
+        <button (click)="changeTab('writing')" [class]="activeTab === 'writing' ? 
+    'rainbow-text-selected' : 
+    'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Image Playground
+        </button>
+
+        <button (click)="changeTab('research')" [class]="activeTab === 'research' ? 
+    'rainbow-text-selected' : 
+    'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Siri
+        </button>
+
+    </div>
+    <hr class="h-px my-4 bg-gray-800 border-0">
+    <br>
+    <!-- Header Section -->
+    <!-- <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">{{content[activeTab].title}}</h1>
+        <div class="h-1 w-20 bg-blue-500"></div>
+    </div> -->
+
+    <!-- Main Image -->
+    <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
+        <img [src]="content[activeTab].image" [alt]="content[activeTab].title"
+            class="w-full h-auto object-cover transition-all duration-300">
+    </div>
+
+    <!-- Content Text -->
+    <div
+        class="w-[600px] mx-auto mb-8 text-center text-xl whitespace-pre-line text-gray-700 leading-snug font-semibold">
+        {{content[activeTab].text}}
+    </div>
 </div>

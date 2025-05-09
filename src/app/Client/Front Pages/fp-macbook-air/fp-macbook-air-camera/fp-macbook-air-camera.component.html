@@ -1,0 +1,68 @@
+<div class="max-w-[1200px] mt-16 mx-auto px-6 lg:px-16">
+    <h2 class="font-semibold text-2xl">CAMERA AND AUDIO</h2>
+    <p class="text-6xl pb-8 font-bold mb-4 bg-gradient-to-r from-[#052944] via-[#315B7B] to-[#5281A5] bg-clip-text text-transparent">
+        When you move, <br> it moves.
+    </p>
+</div>
+
+<!-- aerial-agility.component.html -->
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+
+    <!-- Navigation Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4">
+        <!-- <button (click)="changeTab('prototype')" [class]="activeTab === 'prototype' ? 
+      'rainbow-text-selected' : 
+      'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Writing Tools
+        </button> -->
+
+        <button (click)="changeTab('center')" [class]="activeTab === 'center' ? 
+    'rainbow-text-selected' : 
+    'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Center Stage
+        </button>
+
+        <button (click)="changeTab('desk')" [class]="activeTab === 'desk' ? 
+    'rainbow-text-selected' : 
+    'rainbow-text-hover'"
+            class="flex-1 cursor-pointer py-3 px-6 rounded-lg font-medium transition-all duration-300 bg-transparent">
+            Desk View
+        </button>
+
+    </div>
+    <hr class="h-px my-4 bg-gray-800 border-0">
+    <br>
+    <!-- Header Section -->
+    <!-- <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">{{content[activeTab].title}}</h1>
+        <div class="h-1 w-20 bg-blue-500"></div>
+    </div> -->
+
+    <!-- Main Image -->
+    <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
+        <img [src]="content[activeTab].image" [alt]="content[activeTab].title"
+            class="w-full h-auto object-cover transition-all duration-300">
+    </div>
+
+    <!-- Content Text -->
+    <div
+        class="w-[600px] mx-auto mb-8 text-center text-xl whitespace-pre-line text-gray-700 leading-snug font-semibold">
+        {{content[activeTab].text}}
+    </div>
+</div>
+
+
+<div class="flex flex-col items-center py-24 justify-center text-center">
+    <div class="flex flex-row justify-center mt-4 gap-16 max-w-3xl">
+        <p class="text-gray-600 font-semibold text-center text-lg"> 
+            <img class="w-10 mb-2 mx-auto" src="assets/Macbook-Air/macbook-air-three-mic.png" alt=""> 
+            <span class="text-black font-semibold">Three-mic array.</span> MacBook Air provides enhanced voice clarity in audio and video calls while minimizing background noise. 
+        </p>
+        <p class="text-gray-600 font-semibold text-center text-lg"> 
+            <img class="w-10 mb-4 mx-auto" src="assets/Macbook-Air/macbook-air-immersive.png" alt=""> 
+            <span class="text-black font-semibold">Immersive sound system.</span> The speakers on MacBook Air support Spatial Audio along with Dolby Atmos, so you can enjoy a three-dimensional soundstage for music and movies. 
+        </p>
+    </div>
+</div>
